@@ -1,0 +1,119 @@
+// Create some SASS!
+
+$blue: #29529e ;
+$green: #8eb71f ;
+$orange:  #ff771c ;
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "franklin-gothic-urw", sans-serif;
+}
+
+.prospectform {
+  color: $green;
+  width: 496px;
+  padding: 30px;
+  margin: 0 auto;
+  h2 {
+    font-size: 1.7em;
+    font-weight: 900;
+    color: $blue; // NAZ: replace with variable for blue
+    margin-bottom: 0.4em;
+  }
+  p {
+    font-size: 1.2em;
+    line-height: 1.3em;
+    color: $blue;
+    margin-bottom: 1em;
+  }
+  &__field {
+    label, input, select, ul, li { display: block; width: 100%;}
+    input, select {
+      margin-top: 5px;
+      margin-bottom: 15px;
+      height: 35px;
+      border-radius: 8px;
+      border: 2px solid #e5e5e5;
+      background-color: #f6f6f6;
+      padding: 5px;
+      font-size: 1em;
+      font-weight: 900;
+      color: #767676;
+    }
+    input.invalid {
+      border: 2px solid #ff9999;
+    }
+    input:focus {
+      outline: none;
+    }
+    &--half {
+      display: inline-block;
+      width: 48%;
+      margin-right: 3%;
+    }
+    &--full {
+      width: 100%;
+    }
+    &--center {
+      width: 60%;
+      margin: 0 auto;
+    }
+    &--nomargin { margin-right: 0; }
+  }
+  &__checkbox {
+    position: relative;
+    padding: 15px;
+    margin: 10px 0;
+    label {
+      position: relative; left: 0;
+      color: $blue;
+      font-size: 1.25em;
+    }
+    input[type=radio]:not(old){
+      display: none;
+    }
+    label:after {
+      position: absolute; right: -10px; bottom: -10px;
+      content: "";
+      display: inline-block;
+      height: 35px;
+      width: 35px;
+      border-radius: 5px;
+      border: 2px solid #e5e5e5;
+      background-color: #f6f6f6;
+      color: $green;
+    }
+    input[type=radio]:checked ~ label:after {
+      content: "\2714";
+      font-weight: bold;
+      font-size: 2em;
+    }
+    &.selected {
+      border-radius: 5px;
+      background-color: lighten($green, 40%);
+      border: 2px solid $green;
+    }
+  }
+  &__type {
+    margin: 20px auto 30px;
+  }
+  .btn--submit {
+    border: none;
+    padding: 4px 75px;
+    font-weight: 700;
+    font-size: 1.7em;
+    display: block;
+    margin: 0 auto;
+    background-color: $green;
+    border-radius: 5px;
+    color: white;
+    margin-top: 23px;
+    cursor: pointer;
+  }
+  .require {
+    color: red;
+  }
+
+}

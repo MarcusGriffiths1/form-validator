@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- naz typekit -->
+	<script src="https://use.typekit.net/fyt8dvj.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<link rel="stylesheet" href="css/vendor/_bower.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="prospectform">
+		<h2>Request a Prospectus</h2>
+		<p>With seven educational facilities within the academy, there’s a place for everyone. Please fill out the form below to order a prospectus.</p>
+		<form id="prospectform" name="prospectform" action="post">
+			<div class="prospectform__field prospectform__field--half">
+				<label for="fname">First name <span class="require">*</span></label>
+				<input type="text" id="fname" name="fname" required>
+			</div>
+			<div class="prospectform__field prospectform__field--half prospectform__field--nomargin">
+				<label for="lname">Last name <span class="require">*</span></label>
+				<input type="text" id="lname" name="lname" required>
+			</div>
+			<div class="prospectform__field prospectform__field--full">
+				<label for="email">Email <span class="require">*</span></label>
+				<input type="email" id="email" name="email" required>
+			</div>
+			<div class="prospectform__field prospectform__field--full">
+				<label for="school">School of Interest <span class="require">*</span></label>
+				<select name="school" id="school" required>
+					<option value="">Select a school...</option>
+					<option value="1">School 1</option>
+					<option value="2">School 2</option>
+					<option value="3">School 3</option>
+					<option value="4">School 4</option>
+					<option value="5">School 5</option>
+					<option value="6">School 6</option>
+					<option value="7">School 7</option>
+				</select>
+			</div>
+			I would prefer to recieve my prospectus by <span class="require">*</span>:
+			<div class="prospectform__field prospectform__field--center prospectform__type">
+				<ul>
+					<li class="prospectform__checkbox">
+						<input id="digital" type="radio" name="type" value="digital" required>
+						<label for="digital">Digital Download</label>
+					</li>
+					<li class="prospectform__checkbox">
+						<input id="email-attach" type="radio" name="type" value="email" required>
+						<label for="email-attach">Email</label>
+					</li>
+					<li class="prospectform__checkbox">
+						<input id="postal" type="radio" name="type" value="postal" required>
+						<label for="postal">Post</label>
+					</li>
+				</ul>
+			</div>
+			<div class="js-prospectform__address">
+				<div class="prospectform__field">
+					<label for="add1">Address Line 1 <span class="require">*</span></label>
+					<input type="text" id="add1" name="add1">
+				</div>
+				<div class="prospectform__field">
+					<label for="add1">Address Line 2</label>
+					<input type="text" id="add2" name="add2">
+				</div>
+				<div class="prospectform__field">
+					<label for="add1">Address Line 3</label>
+					<input type="text" id="add3" name="add3">
+				</div>
+				<div class="prospectform__field prospectform__field--half">
+					<label for="city">City <span class="require">*</span></label>
+					<input type="text" id="city" name="city">
+				</div>
+				<div class="prospectform__field prospectform__field--half prospectform__field--nomargin">
+					<label for="postcode">Postcode <span class="require">*</span></label>
+					<input type="text" id="postcode" name="postcode">
+				</div>
+			</div>
+			<input class="btn btn--submit" type="submit" value="Submit">
+		</form>
+	</div>
+<script src="js/vendor/_bower.js"></script>
+<script src="js/scripts.min.js"></script>
+</body>
+</html>
